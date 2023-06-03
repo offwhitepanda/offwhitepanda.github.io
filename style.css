@@ -4,6 +4,11 @@ body, div, h1, h2, h3, h4, h5, h6, p, img, ul, li {
 	padding: 0;
 }
 
+img:hover {
+    cursor: zoom-in;
+  }
+  
+
 #header-bar {
 	background-color: #333;
 	height: 60px;
@@ -32,7 +37,6 @@ body, div, h1, h2, h3, h4, h5, h6, p, img, ul, li {
 #header-section-3 {
 	width: 100px;
 	height: 30px;
-	background-color: #555;
 	margin: 0 10px;
 }
 
@@ -48,7 +52,8 @@ body, div, h1, h2, h3, h4, h5, h6, p, img, ul, li {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 20px;
-	padding: 20px;
+	padding-top:5%;
+    padding-bottom:5%;
 }
 
 #who-am-i-col {
@@ -73,6 +78,18 @@ body, div, h1, h2, h3, h4, h5, h6, p, img, ul, li {
 
 #who-am-i-text {
     text-align: left;
+}
+#who-am-i-cert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#who-am-i-cert img{
+    height:150px;
+    width:150px;
 }
 
 
