@@ -1,12 +1,8 @@
 
-body, div, h1, h2, h3, h4, h5, h6, p, img, ul, li {
+body, div, h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
 	padding: 0;
 }
-
-img:hover {
-    cursor: zoom-in;
-  }
   
 
 #header-bar {
@@ -53,7 +49,7 @@ img:hover {
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 20px;
 	padding-top:5%;
-    padding-bottom:5%;
+	padding-bottom:20px;
 }
 
 #who-am-i-col {
@@ -89,7 +85,7 @@ img:hover {
 
 #who-am-i-cert img{
     height:150px;
-    width:150px;
+    width:160px;
 }
 
 
@@ -105,15 +101,15 @@ img:hover {
 
 #specialties {
     margin-right:auto;
-	display: flex;
+	display: block;
 	flex-direction: column;
 	align-items: left;
 }
 
 .specialties {
+	max-width:100%;
 	width: 100%;
 	background-color: #a4a4a4;
-	padding: 20px;
 	text-align: left;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	border-radius: 4px;
@@ -122,10 +118,15 @@ img:hover {
 
 .specialties h2 {
 	margin-bottom: 10px;
+	padding-left:20px;
+	padding-top:10px;
 }
 
 .specialties p {
 	margin-bottom: 20px;
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:20px;
 }
 
 #repo-samples {
@@ -134,23 +135,32 @@ img:hover {
 
 #content-body-2 {
     margin-left: 10%;
-    margin-right: 10%;
+	margin-right: 10%;
     padding-bottom: 50px;
 }
 
 .repo {
 	width: 100%;
+	max-width: 100%;
 	background-color: #a4a4a4;
-	padding: 20px;
 	text-align: left;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	border-radius: 4px;
     display: grid;
     grid-template-columns: 1fr 3fr;
+	border: 2px solid black;
 }
 
+.repo-img {
+	padding:10px;
+	border-right: 1px solid black;
+}
+
+.repo ul{
+	padding:20px;
+}
 .repo img {
-	height: 100px;
+	height: 150px;
 	width: auto;
 	margin-bottom: 10px;
 	max-width: 100%;
@@ -158,9 +168,14 @@ img:hover {
 	object-position: top left;
 }
 
+.repo img:hover{
+	cursor: zoom-in;
+}
+
 .repo-text {
     margin-left: 5%;
     margin-right: 5%;
+	padding:10px;
 }
 
 .repo h2 {
@@ -181,23 +196,44 @@ img:hover {
 }
 
 .image-enlarger {
-	position: fixed;
-	top: 0;
-	left: 0;
 	width: 100%;
-	height: 100%;
+	height:auto;
 	background-color: rgba(0, 0, 0, 0.8);
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	padding-top: 10px;
+	
 }
 
-.image-enlarger img {
-	max-width: 90%;
-	max-height: 90%;
-}
 
 .image-enlarger-closed {
 	display: none;
+	max-width:100%;
+	width:100%;
 }
+
+.image-enlarger-open {
+	position: absolute;
+	top: calc(0px + var(--scroll-y, 0px));
+	left: 0px;
+	background-color: rgba(51, 51, 51, 0.25);
+	display: flex;
+	align-items: center; 
+	justify-content: center; 
+	padding-top: 10px;
+	max-width: 100%;
+	width: 100%;
+	height: 100%;
+}
+
+#image-enlarger img {
+	max-width: 90%;
+	width: 90%;
+	max-height: 90%;
+	height: auto;
+	opacity: 1 !important;
+}
+
+#image-enlarger img:hover{
+	cursor:zoom-out;
+}
+
 
