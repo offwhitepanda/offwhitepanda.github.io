@@ -109,7 +109,7 @@ body, div, h1, h2, h3, h4, h5, h6, p {
 .specialties {
 	max-width:100%;
 	width: 100%;
-	background-color: #a4a4a4;
+	background-color: #e3e3e3; /* #a4a4a4 */
 	text-align: left;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	border-radius: 4px;
@@ -142,7 +142,7 @@ body, div, h1, h2, h3, h4, h5, h6, p {
 .repo {
 	width: 100%;
 	max-width: 100%;
-	background-color: #a4a4a4;
+	background-color: #e3e3e3;
 	text-align: left;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	border-radius: 4px;
