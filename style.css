@@ -6,6 +6,10 @@ body, div, h1, h2, h3, h4, h5, h6, p {
 
 body {
 	background-color: rgb(74, 104, 143);
+	background: linear-gradient(137deg, rgba(74,104,143,1) 32%, rgba(47,47,51,1) 70%, rgba(0,212,255,1) 100%);
+	background-image: url("./images/cyber.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
   
@@ -47,6 +51,18 @@ body {
     filter:invert(100%);
 }
 
+#floating-circle {
+	position: absolute;
+	top:50px;
+	left:50px;
+	height: 50px;
+	width: 50px;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	background-color: aquamarine;
+	opacity: 50%;
+}
+
 #content-body-1 {
     margin-left: 10%;
     margin-right: 10%;
@@ -79,9 +95,14 @@ body {
 }
 
 #who-am-i-text {
+    display: flex;
     text-align: left;
-	padding-left: 5px;
-	
+    padding-left: 5px;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
 }
 
 #who-am-i-text a {
@@ -114,22 +135,42 @@ body {
 
 #specialties {
     margin-right:auto;
-	display: block;
-	flex-direction: column;
-	align-items: left;
-	border-radius: 50%;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .specialties {
-	max-width:100%;
-	width: 100%;
-	background-color: #e9f8fd; /* #a4a4a4 */
-	text-align: left;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	border-radius: 4px;
-	margin-bottom: 20px;
+	
+display: inline-flex;
+	
+background-color: #e9f8fd; /* #a4a4a4 */
+	
+text-align: center;
+	
+width: 250px;
+	
+aspect-ratio: 1/1;
+	
+border-radius: 50%;
+	
+margin-bottom: 20px;
+	
+align-items: center;
+	
+justify-content: center;
+	
+margin: 0% 1% 3% auto;
+
 }
 
+.specialties:nth-child(odd){
+	margin-top:5%;
+}
 .specialties h2 {
 	margin-bottom: 10px;
 	padding-left:20px;
@@ -141,6 +182,7 @@ body {
 	padding-left:20px;
 	padding-right:20px;
 	padding-bottom:20px;
+	content-visibility: hidden;
 }
 
 #repo-samples {
