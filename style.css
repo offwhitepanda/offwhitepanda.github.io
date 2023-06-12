@@ -61,6 +61,8 @@ body {
     filter:invert(100%);
 }
 
+/*---------------------------End Header Section-------------------------------------------------*/
+
 .floating-circle {
 	position: absolute;
 	top:50px;
@@ -117,6 +119,16 @@ body {
     box-sizing: border-box;
 }
 
+#mouseOut {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	background-color: rgba(0, 0, 0, 0); /* Transparent background */
+	z-index: 2;
+  }
+
 #who-am-i-col {
     margin-left:auto;
     display:grid;
@@ -142,8 +154,11 @@ body {
 	font-size: 3em;
 }
 
+#who-am-i-title h1:hover {
+	cursor:context-menu;
+}
+
 #who-am-i-text {
-    display: flex;
     text-align: left;
     padding-left: 5px;
     align-items: flex-start;
@@ -153,6 +168,10 @@ body {
     flex-direction: column;
 	display:none;
 }
+
+#who-am-i-text:target {
+	display: flex;
+  }
 
 #who-am-i-text a {
 	color:white;
@@ -220,6 +239,40 @@ justify-content: center;
 	
 margin: 0% 1% 3% auto;
 }
+
+.specialties:hover {
+	animation: pulse 1.5s ease !important;
+}
+
+@keyframes pulse {
+	0% {
+	  transform: scale(1);
+	}
+	12%{
+		transform: scale(1.05);
+	}
+	25% {
+		transform: scale(1.1);
+	}
+	38% {
+		transform: scale(1.15);
+	}
+	50% {
+	  transform: scale(1.2);
+	}
+	62% {
+		transform: scale(1.15);
+	}
+	75% {
+		transform: scale(1.1);
+	}
+	87% {
+		transform: scale(1.05);
+	}
+	100% {
+	  transform: scale(1.0);
+	}
+  }
 
 
 .specialties:nth-child(odd){
@@ -415,6 +468,7 @@ margin: 0% 1% 3% auto;
 	.specialties {
 		text-align: center !important;
 	}
+
 
 	.specialties h2 {
 		font-size:.75em;

@@ -67,6 +67,49 @@ document.addEventListener('DOMContentLoaded', function() {
         imageEnlarger.classList.add('image-enlarger-closed');
     });
 
+    //===========================================Show Bio==================================================================================//
+
+    const whoAmICol = document.getElementById('who-am-i-col');
+    const initialHeight = whoAmICol.clientHeight;
+    whoAmICol.style.height = initialHeight + 'px';
+    
+    const nameElement = document.getElementById('name');
+    const whoAmITextElement = document.getElementById('who-am-i-text');
+    const whoAmIElement = document.getElementById('who-am-i');
+    const mouseOutElement = document.getElementById('mouseOut');
+    
+    nameElement.addEventListener('click', function(event) {
+
+      const mouseX = event.clientX;
+      const mouseY = event.clientY;
+      whoAmIElement.style.display = 'flex';
+      whoAmIElement.style.flexDirection = 'row';
+      whoAmITextElement.style.display = 'flex';
+      whoAmITextElement.style.paddingLeft = '50px';
+      nameElement.style.writingMode = 'horizontal-tb';
+      nameElement.style.textOrientation = 'upright';
+      nameElement.style.transform = 'rotate(270deg)';
+      nameElement.style.marginRight = '10px'; // Adjust the margin as needed
+      mouseOutElement.style.backgroundColor = "black";
+      mouseOutElement.style.borderRadius = "50%";
+      mouseOutElement.style.top = mouseY + "px";
+      mouseOutElement.style.left = mouseX + "px";
+      mouseOutElement.style.display = "block";
+    });
+    
+    mouseOutElement.addEventListener('mouseout', function() {
+      whoAmIElement.style.display = 'block';
+      whoAmITextElement.style.display = 'none';
+      nameElement.style.writingMode = 'horizontal-tb';
+      nameElement.style.textOrientation = 'mixed';
+      nameElement.style.transform = 'rotate(0deg)';
+      nameElement.style.marginRight = '0'; // Reset the margin
+      mouseOutElement.style.display = 'none';
+    });
+    
+    
+
+
     //===========================================Radial Dial==============================================================================//
 
 
@@ -244,7 +287,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       
     
-    moveObjectAlongPath();
+    // moveObjectAlongPath();
     
     
     
@@ -253,6 +296,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //============================================= Floating-Circle-END =============================================================================//
 
+    //============================================= More specialties work ==========================================================================//
+
+        // Lock specialties div
+        const specialtiesInitialHeight = specialties.clientHeight;
+        specialties.style.height = initialHeight + 'px';
     
 
 });
