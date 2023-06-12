@@ -90,11 +90,9 @@ document.addEventListener('DOMContentLoaded', function() {
       nameElement.style.textOrientation = 'upright';
       nameElement.style.transform = 'rotate(270deg)';
       nameElement.style.marginRight = '10px'; // Adjust the margin as needed
-      mouseOutElement.style.backgroundColor = "black";
-      mouseOutElement.style.borderRadius = "50%";
-      mouseOutElement.style.top = mouseY + "px";
-      mouseOutElement.style.left = mouseX + "px";
-      mouseOutElement.style.display = "block";
+      mouseOutElement.classList.replace('hide-mouseOut','show-mouseOut');
+      mouseOutElement.style.top = mouseY - 25 + "px";
+      mouseOutElement.style.left = mouseX - 25 + "px";
     });
     
     mouseOutElement.addEventListener('mouseout', function() {
@@ -104,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
       nameElement.style.textOrientation = 'mixed';
       nameElement.style.transform = 'rotate(0deg)';
       nameElement.style.marginRight = '0'; // Reset the margin
-      mouseOutElement.style.display = 'none';
+      mouseOutElement.classList.replace('show-mouseOut','hide-mouseOut');
     });
     
     
