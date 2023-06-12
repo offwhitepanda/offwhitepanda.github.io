@@ -10,23 +10,31 @@
 <body>
 	<div id="header-bar">
 		<div id="header-section-1">
-			<a href="./index.html"><img id="home-icon" src="./images/home.png"></a>
+			<a href="./index.html"><img class="header-images-hue" id="home-icon" src="./images/home.png"></a>
 		</div>
 		<div id="header-section-2">
-			<a href="https://www.linkedin.com/in/richard-hurley-1a2410176/"><img id="home-icon" src="./images/linkedin1.png"></a>
-			<a href="https://github.com/richard-hurley"><img id="home-icon" src="./images/github1.png"></a>
-			<a href="https://www.fiverr.com/hurley391?up_rollout=true"><img id="home-icon" src="./images/fiverr1.png"></a>
+			<a href="https://www.linkedin.com/in/richard-hurley-1a2410176/"><img class="header-images-hue" src="./images/linkedin1.png"></a>
+			<a href="https://github.com/richard-hurley"><img class="header-images-hue" src="./images/github2.png"></a>
+			<a href="https://www.fiverr.com/hurley391?up_rollout=true"><img class="header-images-hue" src="./images/fiverr1.png"></a>
 		</div>
-		<div id="header-section-3"></div>
+		<div id="header-section-3">
+			<input type="button" id="return" text="return">
+		</div>
 	</div>
 
-	<div id="floating-circle"></div>
+	<div class="floating-circle"></div>
+
+	<div class="slider-container">
+		<input type="range" min="0" max="360" value="0" class="slider" id="mySlider">
+		<div class="slider-value" id="sliderValue">0</div>
+	</div>
+	  
 
 	<div id="content-body-1">
 		<div id="who-am-i-col">
 			<div id="who-am-i">
-				<div id="who-am-i-title">
-					<h1>Richard Hurley</h1><br>
+				<div id="who-am-i-title" >
+					<h1 class="hue-text">Richard Hurley</h1><br>
 					<img id="me-jpg" src="./images/me2.jpg">
 				</div>
 				<br>
@@ -38,7 +46,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="who-am-i-text">
+		<div id="who-am-i-text" class="hue-text">
 					
 			<p>
 				<b>Network + Certified  |  Leadership Certified  |  Selfless and Determined</b>
@@ -54,10 +62,6 @@
 				
 			</p>
 		</div>
-		
-		
-	</div>
-	<div id="content-body-2">
 		<div id="specialties">
 			<div class="specialties" id="specialties-1">
 				<h2>System Administration</h2>
@@ -99,6 +103,14 @@
 				</p>
 			</div>
 		</div>	
+		<div id="continue-to-specialties" class="images-hue no-invert"><img src="./images/arrow1.gif"></div>
+	</div>
+	
+	<div id="content-body-2">
+		
+
+		
+
 		<div id="repo-samples">
 			<div class="repo">
 				<div class="repo-img">
